@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use(require('./routes/authentication'))
+app.use(require('./routes/contacts'))
 
 app.listen(port, ()=>{
   console.log(`Server running on port ${port}`)

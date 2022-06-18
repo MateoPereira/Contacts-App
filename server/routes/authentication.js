@@ -14,10 +14,6 @@ router.post('/signup', passport.authenticate('local.signup', {
 }))
 
 // Sign in
-router.get('/signin', (req, res)=>{
-  res.send('Sign In Page')
-})
-
 router.post('/signin', (req, res, next) => {
   passport.authenticate('local.signin', {
     successRedirect: '/profile',
@@ -25,8 +21,16 @@ router.post('/signin', (req, res, next) => {
   })(req, res, next)
 })
 
-router.get('/profile', isLoggedIn , (req, res) => {
+router.get('/profile', isLoggedIn, (req, res) => {
   res.send(req.user)
 })
+
+router.get('/logout', function(req, res, next) {
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/signup');
+  });
+});
+
 
 module.exports = router;

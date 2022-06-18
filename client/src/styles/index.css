@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: rgb(99, 102, 114);
+  background-color: rgb(95, 99, 114);
 }
 
 .fa-solid, .sign-in-button {
@@ -36,4 +36,12 @@ body {
   position: relative;
   left: 5%;
   cursor: pointer;
+}
+
+.dropdown::after {
+  content: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(136, 136, 223, 0.32);
 }
