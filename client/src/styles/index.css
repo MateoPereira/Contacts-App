@@ -1,0 +1,39 @@
+* {
+  text-decoration: none !important;
+}
+
+.primary-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+}
+
+.secondary-text {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-item {
+  font-size: 20px;
+}
+
+body {
+  background-color: rgb(99, 102, 114);
+}
+
+.fa-solid, .sign-in-button {
+  transform: scale(1.5);
+}
+
+.alert {
+  text-align: center;
+  font-size: 30px;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.password-fa {
+  position: relative;
+  left: 5%;
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+@media only screen and (max-width: 1800px) {
+  .sign-in-container {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .sign-in-container {
+    width: 95% !important;
+  }
+}
