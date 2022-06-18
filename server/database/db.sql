@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS contacts (
   contactId int not null auto_increment,
   name varchar(255),
   email varchar(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   user varchar(255) not null,
   PRIMARY KEY (contactId),
   FOREIGN KEY (user) REFERENCES users(username)
