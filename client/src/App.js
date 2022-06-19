@@ -32,7 +32,7 @@ function App() {
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/profile" element={<Profile name={name} setName={setName} />}></Route>
           <Route path="/logout" element={<Logout/>}></Route>
-          <Route path='/contacts' element={<Contacts name={name} />}></Route>
+          <Route path='/contacts' element={<Contacts name={name} setName={setName} />}></Route>
         </Routes>
       </Router>
     </div>

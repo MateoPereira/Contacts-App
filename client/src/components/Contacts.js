@@ -5,7 +5,7 @@ import axios from 'axios'
 import AddModal from './Add'
 import EditModal from './Edit'
 
-export default function Contacts({name}) {
+export default function Contacts({name, setName}) {
   const [contactsList, setContactsList] = useState([])
   const [showAddModal, setShowAddModal] = useState(false)
   const [showEditModal, setShowEditModal] = useState(false)
@@ -21,14 +21,16 @@ export default function Contacts({name}) {
     const getContacts = async ()=>{
       try {
         const res = await instance.get('/contacts');
-        setContactsList(res.data)  
+        setContactsList(res.data);
+        const prof = await instance.get('/profile')
+        setName(prof.data.fullname)
       }
       catch(err){
         navigate('/signin')
       }
     }
     getContacts()  
-  }, [instance])
+  }, [setContactsList, contactsList])
 
   const deleteContact = async (id)=>{
     const confirmation = window.confirm('Are you sure you want delete this contact?')
