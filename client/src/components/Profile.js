@@ -36,7 +36,7 @@ export default function Profile ({name, setName}){
     <>
       <header className='dropdown-header d-flex justify-content-between' style={{ backgroundColor: "rgb(120, 120, 140)" }}>
         <h6 className='d-inline text-dark'>
-          <NavLink to="profile" className='text-dark'>Mateo Pereira</NavLink>
+          <NavLink to="profile" className='text-dark'>{name}</NavLink>
         </h6>
         <Dropdown className='d-inline'>
           <Dropdown.Toggle className='dropdown border-0 text-dark' style={{background: 'transparent'}}>
